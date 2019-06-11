@@ -36,7 +36,7 @@ describe('HeroesComponent', () => {
     heroService = TestBed.get(HeroService);
     spyOn(heroService, 'getHeroes').and.returnValue(getMockHeroes());
     addSpy = spyOn(heroService, 'addHero').and.returnValue(of({ id: 1, name: 'test' }));
-    deleteSpy = spyOn(heroService, 'deleteHero').and.returnValue(of(true));
+    deleteSpy = spyOn(heroService, 'deleteHero').and.returnValue(of(new Hero));
 
     fixture.detectChanges();
   });
